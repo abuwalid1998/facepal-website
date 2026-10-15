@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة جنيفا | GENEVA LIBRARY & Accessories • FacePal Biometric Checkout</title>
+    <meta name="description" content="Geneva Library & Accessories (مكتبة جنيفا ومستلزماتها) - Premium writing instruments, luxury leather journals, fine art supplies, academic books, and school gear powered by FacePal biometric payments.">
+    <!-- Google Fonts: Inter, Cinzel for luxury titles, Cairo for authentic Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span class="announcement-text" data-i18n="announcement">
+                📚 Geneva Library & Accessories • Fine Writing, Books, Art & Stationery • Powered by FacePal Biometrics
+            </span>
+            <div class="lang-switch-wrap">
+                <button id="langToggleBtn" class="btn-lang" title="Toggle Language">
+                    <i data-lucide="globe"></i>
+                    <span id="langLabel">العربية</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar (#a84444) -->
+    <header class="main-header" id="mainHeader">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-logo" id="brandLogo">
+                <img src="./images/geneva_logo.png" alt="مكتبة جنيفا" class="brand-mark-img">
+                <div class="brand-info">
+                    <div class="brand-text">
+                        <span class="brand-title">GENEVA</span>
+                        <span class="brand-arabic">مكتبة جنيفا</span>
+                    </div>
+                    <div class="brand-tagline" data-i18n="tagline">Library & Accessories • قرطاسية ومستلزمات</div>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#storeSection" class="nav-link active" data-i18n="nav_shop">Library Collection</a>
+                <a href="#cartSection" class="nav-link" id="navCartLink" data-i18n="nav_cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <span>Cart & FacePal</span>
+                </a>
+                <a href="#aboutSection" class="nav-link" data-i18n="nav_heritage">About Geneva</a>
+                <button class="nav-link btn-link" id="openRegisterNavBtn" data-i18n="nav_register_face">
+                    <i data-lucide="scan-face"></i>
+                    <span>Register Face</span>
+                </button>
+                <button class="nav-link btn-link" id="openDashboardNavBtn" data-i18n="nav_dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </button>
+            </nav>
+
+            <!-- FacePal Badges & Actions -->
+            <div class="nav-actions">
+                <!-- FacePal Powered Badge -->
+                <div class="facepal-badge-pill" id="facepalBadgePill" title="FacePal Biometric PayPal Wallet Active">
+                    <img src="./images/facepal_logo.png" alt="FacePal" class="facepal-pill-logo">
+                    <div class="facepal-pill-text">
+                        <span class="pill-label">Powered by</span>
+                        <span class="pill-brand">FacePal</span>
+                    </div>
+                </div>
+                <!-- Demo Mode Status Indicator -->
+                <div class="mode-pill" id="demoModePill" style="display:inline-flex; align-items:center; gap:6px; font-size:11px; padding:4px 9px; border-radius:14px; background:rgba(255,255,255,0.18); color:#fff; font-weight:600; border:1px solid rgba(255,255,255,0.25);">
+                    <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block; box-shadow:0 0 6px #10b981;"></span>
+                    <span id="modePillText">GitHub Pages Live Demo</span>
+                </div>
+
+                <!-- Shopping Cart Trigger Button -->
+                <button class="cart-btn" id="cartToggleBtn" aria-label="Open Shopping Cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-section" id="heroSection">
+        <div class="hero-bg-overlay"></div>
+        <img src="./images/hero_geneva.jpg" alt="Geneva Library and Accessories" class="hero-bg-img">
+        <div class="container hero-content">
+            <div class="hero-glass-card">
+                <div class="hero-eyebrow">
+                    <span class="dot-live"></span>
+                    <span data-i18n="hero_eyebrow">World of Literature, Fine Writing & Luxury Stationery</span>
+                </div>
+                <h1 class="hero-title" data-i18n="hero_title">
+                    Geneva Library & Accessories, <br>
+                    <span class="gradient-text">Secured by FacePal</span>
+                </h1>
+                <p class="hero-desc" data-i18n="hero_desc">
+                    Discover our curated selection of fine gold fountain pens, handcrafted leather journals, academic literature, artist-grade art boxes, and ergonomic backpacks. Pay instantly with seamless FacePal biometric facial recognition directly from your PayPal wallet.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#storeSection" class="btn-primary" data-i18n="hero_btn_shop">
+                        <i data-lucide="book-open"></i>
+                        <span>Explore 10 Premium Products</span>
+                    </a>
+                    <a href="#cartSection" class="btn-secondary" id="heroCartBtn" data-i18n="hero_btn_cart">
+                        <i data-lucide="shopping-cart"></i>
+                        <span>Shopping Cart & FacePal</span>
+                    </a>
+                    <button class="btn-secondary" id="heroRegisterBtn">
+                        <i data-lucide="scan-face"></i>
+                        <span data-i18n="hero_btn_register">Link Your Face to PayPal</span>
+                    </button>
+                </div>
+                <!-- Trust markers -->
+                <div class="hero-trust-bar">
+                    <div class="trust-item">
+                        <i data-lucide="shield-check"></i>
+                        <span data-i18n="trust_spoof">Silent-Face Anti-Spoofing</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="database"></i>
+                        <span data-i18n="trust_vector">Qdrant Vector Database</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="wallet"></i>
+                        <span data-i18n="trust_paypal">Instant PayPal Wallet Deduction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Store & Products Section -->
+    <main class="store-section" id="storeSection">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle" data-i18n="catalog_sub">Curated Stationery & Literature Treasury</span>
+                    <h2 class="section-title" data-i18n="catalog_title">Geneva Library & Accessories Collection</h2>
+                </div>
+                <!-- Category Filter Pills -->
+                <div class="category-filters" id="categoryFilters">
+                    <button class="filter-btn active" data-category="all" data-i18n="cat_all">All Products (10)</button>
+                    <button class="filter-btn" data-category="Fine Writing & Pens" data-i18n="cat_pens">Fine Writing & Pens</button>
+                    <button class="filter-btn" data-category="Notebooks & Paper" data-i18n="cat_notebooks">Notebooks & Paper</button>
+                    <button class="filter-btn" data-category="Art & Creative Crafts" data-i18n="cat_art">Art & Crafts</button>
+                    <button class="filter-btn" data-category="Books & Literature" data-i18n="cat_books">Books & Literature</button>
+                    <button class="filter-btn" data-category="Bags & Backpacks" data-i18n="cat_bags">Bags & Gear</button>
+                    <button class="filter-btn" data-category="Luxury Gifts & Desk Accessories" data-i18n="cat_gifts">Desk Accessories</button>
+                    <button class="filter-btn" data-category="Educational & Games" data-i18n="cat_edu">Educational & STEM</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Dynamically populated via app.js -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Dedicated On-Page Shopping Cart & FacePal Payment Section -->
+    <section class="cart-section" id="cartSection">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle" data-i18n="cart_area_sub">Shopping & Checkout</span>
+                    <h2 class="section-title" data-i18n="cart_area_title">Shopping Cart & Pay With FacePal Area</h2>
+                </div>
+            </div>
+
+            <div class="cart-page-layout">
+                <!-- Cart Items Table / List -->
+                <div class="cart-page-items-col">
+                    <div class="cart-page-card">
+                        <div class="cart-card-header">
+                            <h3 data-i18n="cart_items_heading">Selected Library & Stationery Items</h3>
+                            <span class="badge-item-count" id="pageCartCountBadge">0 items</span>
+                        </div>
+
+                        <!-- Empty state -->
+                        <div class="cart-empty-page" id="pageCartEmptyState">
+                            <i data-lucide="shopping-bag" class="page-empty-icon"></i>
+                            <h4 data-i18n="cart_empty_title">Your cart is empty</h4>
+                            <p data-i18n="cart_empty_desc">Select fine stationery, writing instruments, or books to add to your order.</p>
+                            <a href="#storeSection" class="btn-secondary btn-sm" style="margin-top:12px;" data-i18n="hero_btn_shop">
+                                Explore Products
+                            </a>
+                        </div>
+
+                        <!-- Active items list -->
+                        <div class="cart-page-items-list" id="pageCartItemsList" style="display:none;">
+                            <!-- Populated dynamically via app.js -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary & Pay with FacePal Card -->
+                <div class="cart-page-summary-col">
+                    <div class="checkout-summary-card">
+                        <div class="summary-header">
+                            <h3 data-i18n="order_summary">Order Summary</h3>
+                            <span class="summary-secure-badge">
+                                <i data-lucide="shield-check"></i> Biometric SSL
+                            </span>
+                        </div>
+
+                        <div class="summary-breakdown">
+                            <div class="summary-row">
+                                <span data-i18n="cart_subtotal">Subtotal:</span>
+                                <strong id="pageCartSubtotal">$0.00</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span data-i18n="cart_shipping">Heritage Shipping:</span>
+                                <strong class="summary-free" data-i18n="cart_free">FREE</strong>
+                            </div>
+                            <div class="summary-row total-row">
+                                <span data-i18n="cart_total">Total Deductible:</span>
+                                <strong class="total-price" id="pageCartTotal">$0.00</strong>
+                            </div>
+                        </div>
+
+                        <!-- Prominent Pay With FacePal Button in Cart Area -->
+                        <div class="facepal-checkout-box">
+                            <button class="btn-facepal-checkout" id="pagePayWithFacePalBtn">
+                                <div class="facepal-btn-logo-wrap">
+                                    <img src="./images/facepal_logo.png" alt="FacePal" class="btn-facepal-logo">
+                                </div>
+                                <div class="facepal-btn-text">
+                                    <span class="facepal-top-label" data-i18n="pay_via_wallet">Deduct from PayPal Wallet</span>
+                                    <span class="facepal-main-action" data-i18n="pay_with_facepal">Pay with FacePal</span>
+                                </div>
+                                <i data-lucide="scan" class="facepal-btn-scan-icon"></i>
+                            </button>
+                            <div class="facepal-guarantee-note">
+                                <i data-lucide="shield-check"></i>
+                                <span data-i18n="facepal_guarantee">10-second biometric scan • Liveness verified • Protected by Anti-Spoofing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geneva Library Features & Highlight Banner -->
+    <section class="heritage-section" id="aboutSection">
+        <div class="container heritage-container">
+            <div class="heritage-grid">
+                <div class="heritage-card">
+                    <div class="heritage-icon-wrap">
+                        <i data-lucide="feather"></i>
+                    </div>
+                    <h3 data-i18n="feat_pens_title">Master Writing Instruments</h3>
+                    <p data-i18n="feat_pens_desc">German iridium nibs with 24k gold accents, precision piston converters, and royal archival inks for unmatched writing prestige.</p>
+                </div>
+                <div class="heritage-card">
+                    <div class="heritage-icon-wrap">
+                        <i data-lucide="book-marked"></i>
+                    </div>
+                    <h3 data-i18n="feat_books_title">World Literature & References</h3>
+                    <p data-i18n="feat_books_desc">Comprehensive illustrated bilingual dictionaries, classic world literature volumes, and enriching academic resources.</p>
+                </div>
+                <div class="heritage-card">
+                    <div class="heritage-icon-wrap">
+                        <i data-lucide="scroll"></i>
+                    </div>
+                    <h3 data-i18n="feat_leather_title">Hand-Bound Leather Journals</h3>
+                    <p data-i18n="feat_leather_desc">Full-grain genuine leather binding with deckle-edge recycled cotton archival paper crafted for creative minds.</p>
+                </div>
+                <div class="heritage-card">
+                    <div class="heritage-icon-wrap">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 data-i18n="feat_facepal_title">FacePal Biometric Trust</h3>
+                    <p data-i18n="feat_facepal_desc">State-of-the-art DeepFace YuNet and SFace neural networks verify your face with real-time anti-spoofing defense for instant PayPal checkout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (#080808) -->
+    <footer class="main-footer" id="mainFooter">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <img src="./images/geneva_logo.png" alt="مكتبة جنيفا" class="footer-brand-img">
+                    <div>
+                        <span class="f-title">GENEVA</span>
+                        <span class="f-arabic">مكتبة جنيفا</span>
+                    </div>
+                </div>
+                <p class="footer-about" data-i18n="footer_about">
+                    Geneva Library & Accessories (مكتبة جنيفا ومستلزماتها) provides premium writing instruments, luxury leather journals, fine arts, academic literature, and educational supplies with frictionless FacePal biometric payments.
+                </p>
+                <div class="footer-facepal-badge">
+                    <img src="./images/facepal_logo.png" alt="FacePal Biometric Checkout" class="footer-logo-img">
+                    <div>
+                        <strong>Official FacePal Merchant</strong>
+                        <small>Biometric Deduction from PayPal Wallet</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer_links_title">Quick Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#storeSection" data-i18n="nav_shop">Shop 10 Products</a></li>
+                    <li><a href="#aboutSection" data-i18n="nav_heritage">About Geneva</a></li>
+                    <li><button class="footer-btn-link" id="footerRegisterBtn" data-i18n="nav_register_face">Register Face Biometrics</button></li>
+                    <li><button class="footer-btn-link" id="footerDashboardBtn" data-i18n="nav_dashboard">Admin Sales Dashboard</button></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer_security_title">Security & Models</h4>
+                <ul class="footer-specs">
+                    <li><i data-lucide="check-circle-2"></i> YuNet Face Detector ONNX</li>
+                    <li><i data-lucide="check-circle-2"></i> SFace 128-d Recognizer ONNX</li>
+                    <li><i data-lucide="check-circle-2"></i> MiniFASNetV2 Anti-Spoofing</li>
+                    <li><i data-lucide="check-circle-2"></i> Qdrant Embedded Vector DB</li>
+                    <li><i data-lucide="check-circle-2"></i> Mock PayPal Real-time Wallet</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer_contact_title">Geneva Library & Store</h4>
+                <p class="footer-text">
+                    <strong>Geneva Library & Accessories (مكتبة جنيفا)</strong><br>
+                    Books • Fine Pens • Art Supplies • School Accessories<br>
+                    Open Daily 8:00 AM - 10:00 PM
+                </p>
+                <div class="footer-meta-pill">
+                    <span class="port-label">Container Port:</span>
+                    <span class="port-badge">7777</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>© 2026 مكتبة جنيفا - GENEVA LIBRARY & Accessories. All rights reserved. Powered by FacePal Biometric Payment Technology.</p>
+                <div class="footer-flags">
+                    <span>📚 Geneva Library • مكتبة جنيفا</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================================= -->
+    <!-- SLIDE-OVER CART DRAWER -->
+    <!-- ========================================================================= -->
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+        <div class="cart-header">
+            <div class="cart-header-title">
+                <i data-lucide="shopping-bag"></i>
+                <span data-i18n="cart_title">Your Geneva Library Cart</span>
+                <span class="cart-badge-count" id="cartItemsBadge">0</span>
+            </div>
+            <button class="btn-close-drawer" id="closeCartBtn" aria-label="Close cart">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="cart-body" id="cartBody">
+            <!-- Dynamically populated cart items -->
+            <div class="cart-empty" id="cartEmptyState">
+                <i data-lucide="shopping-bag" class="empty-icon"></i>
+                <h4 data-i18n="cart_empty_title">Your cart is empty</h4>
+                <p data-i18n="cart_empty_desc">Select fine stationery, writing instruments, or books to add to your order.</p>
+            </div>
+            <div class="cart-items-list" id="cartItemsList"></div>
+        </div>
+
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-summary-row">
+                <span data-i18n="cart_subtotal">Subtotal:</span>
+                <span class="summary-val" id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+                <span data-i18n="cart_shipping">Heritage Shipping:</span>
+                <span class="summary-free" data-i18n="cart_free">FREE</span>
+            </div>
+            <div class="cart-total-row">
+                <span data-i18n="cart_total">Total Deductible:</span>
+                <span class="total-val" id="cartTotal">$0.00</span>
+            </div>
+
+            <!-- THE CROWN JEWEL: PAY WITH FACEPAL BUTTON -->
+            <button class="btn-facepal-checkout" id="payWithFacePalBtn">
+                <div class="facepal-btn-logo-wrap">
+                    <img src="./images/facepal_logo.png" alt="FacePal" class="btn-facepal-logo">
+                </div>
+                <div class="facepal-btn-text">
+                    <span class="facepal-top-label" data-i18n="pay_via_wallet">Deduct from PayPal Wallet</span>
+                    <span class="facepal-main-action" data-i18n="pay_with_facepal">Pay with FacePal</span>
+                </div>
+                <i data-lucide="scan" class="facepal-btn-scan-icon"></i>
+            </button>
+            <div class="facepal-guarantee-note">
+                <i data-lucide="shield-check"></i>
+                <span data-i18n="facepal_guarantee">10-second biometric scan • Liveness verified • Protected by Anti-Spoofing</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ========================================================================= -->
+    <!-- PAYMENT POPUP MODAL (10-SECOND COUNTDOWN + CAMERA + SPOOF ALERT) -->
+    <!-- ========================================================================= -->
+    <div class="modal-backdrop" id="paymentModalBackdrop">
+        <div class="modal-dialog payment-modal" id="paymentModalDialog">
+            <!-- Modal Header -->
+            <div class="payment-modal-header">
+                <div class="payment-header-brand">
+                    <img src="./images/facepal_logo.png" alt="FacePal" class="modal-facepal-logo">
+                    <div>
+                        <h3 class="modal-title">FacePal Biometric Checkout</h3>
+                        <p class="modal-subtitle">PayPal Wallet Instant Biometric Deduction</p>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="closePaymentModalBtn" aria-label="Cancel Payment">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="payment-modal-body">
+                <!-- 10-Second Countdown HUD -->
+                <div class="countdown-hud" id="countdownHud">
+                    <div class="countdown-timer-circle">
+                        <svg class="timer-svg" viewBox="0 0 100 100">
+                            <circle class="timer-circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="timer-circle-progress" id="timerCircleProgress" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <span class="timer-number" id="countdownNumber">10</span>
+                    </div>
+                    <div class="countdown-info">
+                        <div class="countdown-label" data-i18n="countdown_active">Liveness Window Active</div>
+                        <div class="countdown-sub" data-i18n="countdown_sub">Align face inside scanner. Closes in 10s if no face is detected.</div>
+                    </div>
+                </div>
+
+                <!-- Order Total Summary Badge -->
+                <div class="checkout-amount-pill">
+                    <span data-i18n="amount_to_deduct">Deduction Amount:</span>
+                    <strong id="modalCheckoutAmount">$0.00</strong>
+                    <span class="pill-via">via linked PayPal</span>
+                </div>
+
+                <!-- Live Camera Viewport with Futuristic Face Scanner HUD -->
+                <div class="scanner-viewport-wrap" id="scannerViewportWrap">
+                    <video id="checkoutCameraVideo" autoplay playsinline muted class="scanner-video"></video>
+                    <canvas id="checkoutOverlayCanvas" class="scanner-overlay-canvas"></canvas>
+
+                    <!-- Scanning HUD Overlays -->
+                    <div class="scanner-hud" id="scannerHud">
+                        <div class="hud-corner top-left"></div>
+                        <div class="hud-corner top-right"></div>
+                        <div class="hud-corner bottom-left"></div>
+                        <div class="hud-corner bottom-right"></div>
+                        <div class="scanner-laser-line" id="scannerLaserLine"></div>
+                        <div class="biometric-mesh-crosshair"></div>
+                    </div>
+
+                    <!-- Telemetry Readout -->
+                    <div class="scanner-telemetry">
+                        <span class="telemetry-badge" id="hudDetectionStatus">
+                            <span class="status-pulse-dot"></span>
+                            <span id="hudStatusText">Detecting Face...</span>
+                        </span>
+                        <span class="telemetry-badge anti-spoof-badge" id="hudSpoofBadge">
+                            <i data-lucide="shield"></i> Anti-Spoof Active
+                        </span>
+                    </div>
+
+                    <!-- CRITICAL SPOOF ALERT OVERLAY ("X" MARK) -->
+                    <div class="spoof-alert-overlay" id="spoofAlertOverlay">
+                        <div class="spoof-x-mark">
+                            <i data-lucide="x-circle"></i>
+                        </div>
+                        <h3 class="spoof-alert-title">SECURITY ALERT: SPOOFING DETECTED!</h3>
+                        <p class="spoof-alert-desc" id="spoofAlertDesc">Presentation attack detected! Digital screen or photo replay blocked. Payment aborted.</p>
+                    </div>
+
+                    <!-- SUCCESS CHECKMARK OVERLAY -->
+                    <div class="payment-success-overlay" id="paymentSuccessOverlay">
+                        <div class="success-checkmark-circle">
+                            <i data-lucide="check"></i>
+                        </div>
+                        <h3 class="success-title">Payment Authorized!</h3>
+                        <p class="success-desc" id="successDesc">Deducted from PayPal Wallet</p>
+                        <div class="receipt-card" id="receiptCard">
+                            <div class="receipt-row">
+                                <span>Customer:</span>
+                                <strong id="receiptCustomerName">-</strong>
+                            </div>
+                            <div class="receipt-row">
+                                <span>PayPal Account:</span>
+                                <strong id="receiptPayPalEmail">-</strong>
+                            </div>
+                            <div class="receipt-row">
+                                <span>Amount Deducted:</span>
+                                <strong class="receipt-amount" id="receiptAmountDeducted">$0.00</strong>
+                            </div>
+                            <div class="receipt-row">
+                                <span>Remaining PayPal Balance:</span>
+                                <strong class="receipt-balance" id="receiptNewBalance">$0.00</strong>
+                            </div>
+                            <div class="receipt-row">
+                                <span>Transaction ID:</span>
+                                <code id="receiptTxId">FP-TXN-XXXXXXXX</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UNREGISTERED FACE WARNING OVERLAY -->
+                    <div class="unregistered-alert-overlay" id="unregisteredAlertOverlay">
+                        <div class="unreg-icon">
+                            <i data-lucide="user-x"></i>
+                        </div>
+                        <h3 class="unreg-title" data-i18n="unreg_title">Face Not Registered</h3>
+                        <p class="unreg-desc" data-i18n="unreg_desc">This face is not registered in our database. Payments are strictly restricted to registered users.</p>
+                        <button class="btn-primary btn-sm" id="unregisteredGoRegisterBtn">
+                            <i data-lucide="user-plus"></i>
+                            <span data-i18n="register_now">Register Your Face Now</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scanner Controls and Status Messages -->
+                <div class="scanner-status-box" id="scannerStatusBox">
+                    <p class="scanner-instruction" id="scannerInstructionText">
+                        Looking for registered customer face... Hold still in front of camera.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="payment-modal-footer" style="flex-wrap: wrap;">
+                <button class="btn-secondary" id="cancelPaymentBtn" data-i18n="cancel_payment">Cancel Payment</button>
+                <button class="btn-primary" id="manualScanTriggerBtn">
+                    <i data-lucide="scan"></i>
+                    <span data-i18n="verify_now">Verify & Pay Now</span>
+                </button>
+                <div class="demo-test-controls" id="demoTestControls" style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:10px; padding-top:10px; border-top:1px dashed rgba(255,255,255,0.15);">
+                    <small style="color:var(--color-text-muted); font-size:11px;">GitHub Pages Demo Simulator:</small>
+                    <button type="button" class="btn-sm btn-secondary" id="simulateSpoofBtn" style="font-size:11px; padding:4px 8px; border:1px solid #ef4444; color:#ef4444; background:rgba(239,68,68,0.1); border-radius:6px; cursor:pointer;">
+                        <i data-lucide="shield-alert" style="width:12px;height:12px;vertical-align:middle;"></i> Test Spoof Alert ("X")
+                    </button>
+                    <button type="button" class="btn-sm btn-secondary" id="simulateSuccessBtn" style="font-size:11px; padding:4px 8px; border:1px solid #10b981; color:#10b981; background:rgba(16,185,129,0.1); border-radius:6px; cursor:pointer;">
+                        <i data-lucide="check-circle" style="width:12px;height:12px;vertical-align:middle;"></i> Test Biometric Approval
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- FACE REGISTRATION MODAL / PAGE -->
+    <!-- ========================================================================= -->
+    <div class="modal-backdrop" id="registerModalBackdrop">
+        <div class="modal-dialog register-modal" id="registerModalDialog">
+            <div class="modal-header">
+                <div class="header-with-icon">
+                    <div class="modal-icon-badge">
+                        <i data-lucide="user-check"></i>
+                    </div>
+                    <div>
+                        <h3 class="modal-title" data-i18n="reg_modal_title">Register Face & Link PayPal Wallet</h3>
+                        <p class="modal-subtitle" data-i18n="reg_modal_sub">Store 128-d biometric embedding in Qdrant Vector DB for FacePal checkouts</p>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="closeRegisterModalBtn" aria-label="Close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form id="faceRegistrationForm" class="register-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="regFullName" data-i18n="form_name">Full Name (الاسم الكامل):</label>
+                            <input type="text" id="regFullName" required placeholder="e.g. Tareq Al-Qudsi" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail" data-i18n="form_email">Personal Email (البريد الإلكتروني):</label>
+                            <input type="email" id="regEmail" required placeholder="tareq@example.ps" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="regPayPalEmail" data-i18n="form_paypal">PayPal Account Email (حساب باي بال المرتبط):</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="wallet"></i>
+                                <input type="email" id="regPayPalEmail" required placeholder="tareq.paypal@cyber.ps" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regInitialBalance" data-i18n="form_balance">Initial Mock PayPal Balance ($):</label>
+                            <input type="number" id="regInitialBalance" value="500.00" step="10" min="50" max="5000" class="form-input">
+                        </div>
+                    </div>
+
+                    <!-- Camera Face Capture Area -->
+                    <div class="reg-camera-area">
+                        <label class="form-label" data-i18n="form_face_capture">Biometric Face Capture (التقاط بصمة الوجه):</label>
+                        <div class="reg-viewport-container">
+                            <video id="regCameraVideo" autoplay playsinline muted class="reg-video"></video>
+                            <canvas id="regCanvas" class="reg-canvas" style="display:none;"></canvas>
+                            <div class="reg-crosshairs"></div>
+                            <img id="regCapturedPreview" class="reg-captured-preview" alt="Captured Face" style="display:none;">
+                        </div>
+
+                        <div class="reg-actions-bar">
+                            <button type="button" class="btn-secondary" id="startRegCameraBtn">
+                                <i data-lucide="camera"></i>
+                                <span data-i18n="btn_start_cam">Start Camera</span>
+                            </button>
+                            <button type="button" class="btn-primary" id="captureRegFaceBtn" disabled>
+                                <i data-lucide="aperture"></i>
+                                <span data-i18n="btn_capture_face">Capture & Verify Face</span>
+                            </button>
+                            <button type="button" class="btn-secondary" id="regUploadPhotoBtn">
+                                <i data-lucide="upload"></i>
+                                <span data-i18n="btn_upload_face">Upload Photo</span>
+                            </button>
+                            <input type="file" id="regFaceFileInput" accept="image/*" style="display:none;">
+                        </div>
+                        <p class="reg-hint" data-i18n="reg_hint">
+                            ℹ️ YuNet will detect your facial landmarks, MiniFASNet will test for liveness (anti-spoofing), and SFace will extract a 128-d biometric embedding into the vector database.
+                        </p>
+                    </div>
+
+                    <div class="form-feedback" id="regFormFeedback" style="display:none;"></div>
+
+                    <div class="form-submit-row">
+                        <button type="submit" class="btn-primary btn-block" id="submitRegistrationBtn" disabled>
+                            <i data-lucide="shield-check"></i>
+                            <span data-i18n="btn_complete_reg">Complete Registration & Link Wallet</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SALES & RECOGNIZED FACES DASHBOARD MODAL -->
+    <!-- ========================================================================= -->
+    <div class="modal-backdrop" id="dashboardModalBackdrop">
+        <div class="modal-dialog dashboard-modal" id="dashboardModalDialog">
+            <div class="modal-header">
+                <div class="header-with-icon">
+                    <div class="modal-icon-badge">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <div>
+                        <h3 class="modal-title" data-i18n="dash_title">GENEVA LIBRARY FacePal Operations Dashboard</h3>
+                        <p class="modal-subtitle" data-i18n="dash_subtitle">Real-time Sales, Vector Database Index & Recognized Customer Ledger</p>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="closeDashboardModalBtn" aria-label="Close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="modal-body dashboard-body">
+                <!-- Metrics Stat Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon-wrap bg-green">
+                            <i data-lucide="dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label" data-i18n="stat_sales">Total Sales (FacePal)</span>
+                            <h3 class="stat-value" id="dashTotalSales">$0.00</h3>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon-wrap bg-blue">
+                            <i data-lucide="shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label" data-i18n="stat_orders">Completed Orders</span>
+                            <h3 class="stat-value" id="dashCompletedCount">0</h3>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon-wrap bg-red">
+                            <i data-lucide="shield-alert"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label" data-i18n="stat_spoofs">Spoofs Blocked</span>
+                            <h3 class="stat-value" id="dashSpoofCount">0</h3>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon-wrap bg-purple">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label" data-i18n="stat_faces">Registered Faces</span>
+                            <h3 class="stat-value" id="dashUserCount">0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs: Transactions / Registered Faces / Activity Logs -->
+                <div class="dashboard-tabs">
+                    <button class="dash-tab-btn active" data-tab="tx-tab" data-i18n="tab_tx">Transactions Ledger</button>
+                    <button class="dash-tab-btn" data-tab="users-tab" data-i18n="tab_users">Recognized Face Database</button>
+                    <button class="dash-tab-btn" data-tab="logs-tab" data-i18n="tab_logs">Security Audit Logs</button>
+                    <button class="btn-sm btn-secondary refresh-btn" id="refreshDashboardBtn">
+                        <i data-lucide="refresh-cw"></i>
+                        <span data-i18n="refresh">Refresh</span>
+                    </button>
+                </div>
+
+                <!-- Tab 1: Transactions Table -->
+                <div class="dash-tab-content active" id="tx-tab">
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Customer</th>
+                                    <th>PayPal Account</th>
+                                    <th>Amount</th>
+                                    <th>Items</th>
+                                    <th>Biometric Match</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashTxTableBody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Registered Faces Database -->
+                <div class="dash-tab-content" id="users-tab">
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Face Avatar</th>
+                                    <th>Customer ID</th>
+                                    <th>Full Name</th>
+                                    <th>Personal Email</th>
+                                    <th>Linked PayPal Account</th>
+                                    <th>Wallet Balance</th>
+                                    <th>Registered Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashUsersTableBody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Security & Activity Logs -->
+                <div class="dash-tab-content" id="logs-tab">
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Log ID</th>
+                                    <th>Activity Type</th>
+                                    <th>Security Details</th>
+                                    <th>Status</th>
+                                    <th>Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashLogsTableBody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/demo_store.js"></script>
+    <script src="./js/face_reader.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
